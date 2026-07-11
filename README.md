@@ -14,6 +14,7 @@ Assistant intelligent qui permet à un étudiant d'importer ses cours (PDF, Word
 - **Gestion de bibliothèque** : ajout et suppression individuelle de documents
 
 ## Architecture
+```
 Upload (PDF/Word/PPT/TXT)
 ↓
 Extraction de texte (pdfplumber / python-docx / python-pptx)
@@ -27,7 +28,7 @@ Stockage vectoriel (ChromaDB)
 Question → recherche sémantique → prompt augmenté → génération (Gemini API)
 ↓
 Réponse + sources affichées dans l'interface (Streamlit)
-
+```
 ## Stack technique
 
 | Composant | Technologie |
@@ -42,8 +43,8 @@ Réponse + sources affichées dans l'interface (Streamlit)
 
 ### Prérequis
 - Python 3.12+
-- [Ollama](https://ollama.com) installé et démarré
-- Une clé API Gemini ([Google AI Studio](https://aistudio.google.com))
+- Ollama installé et démarré (https://ollama.com)
+- Une clé API Gemini (https://aistudio.google.com)
 
 ### Étapes
 
@@ -72,18 +73,22 @@ streamlit run app.py
 L'application est accessible sur `http://localhost:8501`.
 
 ## Structure du projet
+```
 RAG/
 ├── backend/
 │   ├── ingestion.py       # Extraction de texte (PDF/Word/PPT/TXT)
 │   ├── chunking.py        # Découpage en chunks
 │   ├── vectorstore.py     # Embeddings + ChromaDB
-│   ├── rag.py              # Pipeline retrieval + génération
+│   ├── rag.py             # Pipeline retrieval + génération
 │   └── requirements.txt
 ├── frontend/
-│   ├── app.py              # Interface Streamlit
+│   ├── app.py             # Interface Streamlit
 │   └── requirements.txt
 ├── data/
-│   └── chroma_db/          # Base vectorielle persistante
-└── uploads/                 # Fichiers temporairement uploadés
+│   └── chroma_db/         # Base vectorielle persistante
+└── uploads/                # Fichiers temporairement uploadés
+```
+## Auteur
 
-
+LinkedIn : linkedin.com/in/sedraniaina-herizo-8a22843b3
+GitHub : github.com/Herizo3101
