@@ -1,0 +1,7 @@
+pdfplumber
+python-docx
+python-pptx
+chromadb
+ollama
+google-genai
+python-dotenv

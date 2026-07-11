@@ -10,8 +10,7 @@ from vectorstore import search
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-GEN_MODEL = "gemini-2.5-flash-lite"
-
+GEN_MODEL = "gemini-3-flash-preview"
 SYSTEM_PROMPT = """Tu es un assistant pédagogique qui aide un étudiant à réviser ses cours.
 
 Règles :
